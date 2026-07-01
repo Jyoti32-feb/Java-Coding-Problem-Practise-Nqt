@@ -8,17 +8,27 @@ public class AutoMorphicNumber {
         System.out.print("Enter a number: ");
         int num=sc.nextInt();
 
-        int squareOfNumber=num*num;
+        int nextnum=num+1;
 
-        int digit=String.valueOf(num).length();
-
-        int divisior=(int)Math.pow(10,digit);
-
-        if(squareOfNumber%divisior==num){
-            System.out.println(num+" is Automorphic Number");
+        int root=(int) Math.sqrt(nextnum);
+        if(root*root==nextnum){
+            System.out.println(num+" is sunny number");
         }
         else{
-            System.out.println(num+" is not Automorphic Number");
+            System.out.println(num+" is not sunny number");
         }
+
+//        int squareOfNumber=num*num;
+//
+//        int digit=String.valueOf(num).length();
+//
+//        int divisior=(int)Math.pow(10,digit);
+//
+//        if(squareOfNumber%divisior==num){
+//            System.out.println(num+" is Automorphic Number");
+//        }
+//        else{
+//            System.out.println(num+" is not Automorphic Number");
+//        }
     }
 }
