@@ -14,11 +14,20 @@ public class FibonacciNumber {
             return;
         }
         int sum = 0;
-        for (int i = 1; i < n; i++) {
-            sum=a+b;
-            a=b;
-            b=sum;
+
+        for(int i=1;i<=n;i++){
+            System.out.print(a+" ");
+            sum = a+ b;
+            a = b;
+            b = sum;
         }
-        System.out.println("Fibonacci of n :"+sum);
+
+//            for (int i = 1; i < n; i++) {
+//                sum=a+b;
+//                a=b;
+//                b=sum;
+//            }
+//
+//        System.out.println("Fibonacci of n :"+sum);
     }
 }
