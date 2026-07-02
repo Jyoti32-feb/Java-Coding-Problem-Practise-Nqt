@@ -7,19 +7,31 @@ public class ArmstrongNumber {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter a number: ");
         int number = input.nextInt();
-        int squareOfNumber = number*number;
-        int sum=0;
-        while(squareOfNumber!=0){
-            int rem = squareOfNumber%10;
-            sum = sum+rem;
-            squareOfNumber/=10;
+        int originalNumber = number;
+        int digitsum=0;
+        while(number!=0){
+            digitsum+=number%10;
+            number/=10;
         }
-        if(sum==number){
-            System.out.println(number+" is neon number");
+        if(originalNumber%digitsum==0){
+            System.out.println("the number is harshad number ");
         }
         else{
-            System.out.println(number+" is not neon number");
+            System.out.println("the number is not harshad number ");
         }
+//        int squareOfNumber = number*number;
+//        int sum=0;
+//        while(squareOfNumber!=0){
+//            int rem = squareOfNumber%10;
+//            sum = sum+rem;
+//            squareOfNumber/=10;
+//        }
+//        if(sum==number){
+//            System.out.println(number+" is neon number");
+//        }
+//        else{
+//            System.out.println(number+" is not neon number");
+//        }
 //        int originalNumber = number;
 //        int sum = 0;
 //        while(number!=0){
