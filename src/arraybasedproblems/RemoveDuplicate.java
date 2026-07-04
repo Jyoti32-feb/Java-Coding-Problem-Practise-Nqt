@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class RemoveDuplicate {
     static void main(String[] args) {
-        int []numbers={12,21,3,14,51,11,21,3,4,5,12,11,14};
+        //int []numbers={12,21,3,14,51,11,21,3,4,5,12,11,14};
 
 //        Set<Integer> set=new HashSet<>();
 //        for(int i=0;i<numbers.length;i++){
@@ -29,16 +29,22 @@ public class RemoveDuplicate {
 
 //        Arrays.sort(numbers);
 //
-//        int i=0;
-//        for(int j=1;j<numbers.length;j++){
-//            if(numbers[i]!=numbers[j]){
-//                i++;
-//                numbers[i]=numbers[j];
-//            }
-//        }
-//        for(int k=0;k<i;k++){
-//            System.out.println(numbers[k]);
-//        }
+        int []num={1,1,12,2,3};
+        Arrays.sort(num);
+        int write=0;
+        for(int read=1;read<num.length;read++){
+            if(!(num[read]==num[write])){
+
+                write++;
+
+                num[write]=num[read];
+
+            }
+        }
+
+        for(int k=0;k<=write;k++){
+            System.out.print(num[k]+"  ");
+        }
 //        int index=0;
 //        int uniqueele[]=new int[numbers.length];
 //        for(int i=0;i<numbers.length-1;i++){
@@ -51,18 +57,18 @@ public class RemoveDuplicate {
 //            System.out.print(uniqueele[i]+" ");
 //        }
         //System.out.println("unique elements in array:");
-        System.out.println("Duplicate are :");
-        for(int i=0;i<numbers.length;i++){
-            boolean duplicate=false;
-            for(int j=0;j<i;j++){
-                if(numbers[i]==numbers[j]){
-                    duplicate=true;
-                    break;
-                }
-            }
-            if(duplicate){
-                System.out.print(numbers[i]+"  ");
-            }
-        }
+//        System.out.println("Duplicate are :");
+//        for(int i=0;i<numbers.length;i++){
+//            boolean duplicate=false;
+//            for(int j=0;j<i;j++){
+//                if(numbers[i]==numbers[j]){
+//                    duplicate=true;
+//                    break;
+//                }
+//            }
+//            if(duplicate){
+//                System.out.print(numbers[i]+"  ");
+//            }
+//        }
     }
 }
